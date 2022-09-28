@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qbithelparr</Name>
+  <Repository>entree3000/qbithelper</Repository>
+  <Registry>https://hub.docker.com/r/entree3000/qbithelparr</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/entree3000/qbithelparr</Support>
+  <Project>https://github.com/Entree3k/qbithelparr</Project>
+  <Overview>A Discord bot to display qBittorrent download status</Overview>
+  <Category>Tools:</Category>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/kQSCON6.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/qbithelparr</Config>
+</Container>
