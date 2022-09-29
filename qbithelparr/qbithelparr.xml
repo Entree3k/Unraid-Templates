@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>qbithelparr</Name>
-  <Repository>entree3000/qbithelper</Repository>
+  <Repository>entree3000/qbithelparr</Repository>
   <Registry>https://hub.docker.com/r/entree3000/qbithelparr</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
