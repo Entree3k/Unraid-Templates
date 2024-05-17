@@ -1,20 +1,98 @@
-<?xml version="1.0"?>
-<Container version="2">
-  <Name>qbithelparr</Name>
-  <Repository>entree3000/qbithelparr</Repository>
-  <Registry>https://hub.docker.com/r/entree3000/qbithelparr</Registry>
+<Container>
+  <Name>Discord Torrent Status Bot</Name>
+  <Repository>your-dockerhub-username/discord-torrent-status-bot:latest</Repository>
   <Network>bridge</Network>
+  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/entree3000/qbithelparr</Support>
   <Project>https://github.com/Entree3k/qbithelparr</Project>
-  <Overview>A Discord bot to display qBittorrent download status</Overview>
-  <Category>Tools:</Category>
+  <Overview>The Discord Torrent Status Bot integrates with qBittorrent, Sonarr, and Radarr to provide real-time status updates on torrent downloads.</Overview>
+  <Category>MediaApplication:Other</Category>
+  <WebUI/>
   <TemplateURL/>
   <Icon>https://i.imgur.com/kQSCON6.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <Requires/>
-  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/qbithelparr</Config>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The Discord Torrent Status Bot integrates with qBittorrent, Sonarr, and Radarr to provide real-time status updates on torrent downloads.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>DISCORD_BOT_CHANNEL</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your Discord Channel ID</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>DISCORD_BOT_TOKEN</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your Discord Bot Token</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>SONARR_TV_CATEGORY</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your Sonarr TV Category</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>RADARR_MOVIE_CATEGORY</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your Radarr Movie Category</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>QBITTORRENT_HOST</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your qBittorrent Host</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>QBITTORRENT_PORT</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your qBittorrent Port</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>QBITTORRENT_USERNAME</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your qBittorrent Username</Description>
+      <Type>Variable</Type>
+    </Variable>
+    <Variable>
+      <Name>QBITTORRENT_PASSWORD</Name>
+      <Value></Value>
+      <Mode/>
+      <Description>Your qBittorrent Password</Description>
+      <Type>Variable</Type>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/path/to/config.ini</HostDir>
+      <ContainerDir>/app/config.ini</ContainerDir>
+      <Mode>rw</Mode>
+      <Description>Configuration file</Description>
+    </Volume>
+  </Data>
 </Container>
