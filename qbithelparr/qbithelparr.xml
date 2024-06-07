@@ -1,24 +1,25 @@
-<Container>
-  <Name>Discord Torrent Status Bot</Name>
-  <Repository>your-dockerhub-username/discord-torrent-status-bot:latest</Repository>
+<Container version="2">
+  <Name>qbithelparr</Name>
+  <Repository>discord-bot</Repository>
+  <Registry>https://hub.docker.com/r/entree3000/qbithelparr</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/entree3000/qbithelparr</Support>
+  <Support>https://github.com/Entree3k/qbithelparr</Support>
   <Project>https://github.com/Entree3k/qbithelparr</Project>
-  <Overview>The Discord Torrent Status Bot integrates with qBittorrent, Sonarr, and Radarr to provide real-time status updates on torrent downloads.</Overview>
-  <Category>MediaApplication:Other</Category>
+  <Overview>Discord bot for monitoring qBittorrent torrents and providing updates to a Discord channel.</Overview>
+  <Category>Downloaders</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/qbithelparr/qbithelparr.xml</TemplateURL>
   <Icon>https://i.imgur.com/kQSCON6.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled/>
+  <DateInstalled>2024-06-06</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>The Discord Torrent Status Bot integrates with qBittorrent, Sonarr, and Radarr to provide real-time status updates on torrent downloads.</Description>
+  <Description>Discord bot for monitoring qBittorrent torrents and providing updates to a Discord channel.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -29,70 +30,94 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>DISCORD_BOT_CHANNEL</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your Discord Channel ID</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>DISCORD_BOT_TOKEN</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your Discord Bot Token</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>SONARR_TV_CATEGORY</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your Sonarr TV Category</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>RADARR_MOVIE_CATEGORY</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your Radarr Movie Category</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>QBITTORRENT_HOST</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your qBittorrent Host</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>QBITTORRENT_PORT</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your qBittorrent Port</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>QBITTORRENT_USERNAME</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your qBittorrent Username</Description>
-      <Type>Variable</Type>
-    </Variable>
-    <Variable>
-      <Name>QBITTORRENT_PASSWORD</Name>
-      <Value></Value>
-      <Mode/>
-      <Description>Your qBittorrent Password</Description>
-      <Type>Variable</Type>
-    </Variable>
-  </Environment>
   <Data>
     <Volume>
-      <HostDir>/path/to/config.ini</HostDir>
-      <ContainerDir>/app/config.ini</ContainerDir>
+      <HostDir>/mnt/user/appdata/qbithelparr/config</HostDir>
+      <ContainerDir>/usr/src/app/config</ContainerDir>
       <Mode>rw</Mode>
-      <Description>Configuration file</Description>
     </Volume>
   </Data>
+  <Environment>
+    <Variable>
+      <Value>your_discord_bot_token</Value>
+      <Name>DISCORD_TOKEN</Name>
+      <Mode/>
+      <Description>Token for Discord bot authentication</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>your_discord_channel_id</Value>
+      <Name>DISCORD_CHANNEL</Name>
+      <Mode/>
+      <Description>Discord channel ID to send updates</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>your_qbittorrent_username</Value>
+      <Name>QBITTORRENT_USERNAME</Name>
+      <Mode/>
+      <Description>qBittorrent WebUI username</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>your_qbittorrent_password</Value>
+      <Name>QBITTORRENT_PASSWORD</Name>
+      <Mode/>
+      <Description>qBittorrent WebUI password</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>localhost</Value>
+      <Name>QBITTORRENT_HOST</Name>
+      <Mode/>
+      <Description>qBittorrent WebUI host</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>QBITTORRENT_PORT</Name>
+      <Mode/>
+      <Description>qBittorrent WebUI port</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>tv</Value>
+      <Name>SONARR_TV_CATEGORY</Name>
+      <Mode/>
+      <Description>Sonarr TV category</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+    <Variable>
+      <Value>movies</Value>
+      <Name>RADARR_MOVIE_CATEGORY</Name>
+      <Mode/>
+      <Description>Radarr Movie category</Description>
+      <Type>Variable</Type>
+      <Display>always</Display>
+      <Required>true</Required>
+      <Mask>false</Mask>
+    </Variable>
+  </Environment>
+  <Config Name="AppData Config Path" Target="/usr/src/app/config" Default="/mnt/user/appdata/qbithelparr/config" Mode="rw" Description="Container config directory path" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/qbithelparr/config</Config>
 </Container>
