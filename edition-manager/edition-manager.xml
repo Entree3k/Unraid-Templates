@@ -7,8 +7,8 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/your-github-username/edition-manager</Support>
-  <Project>https://github.com/your-github-username/edition-manager</Project>
+  <Support>https://github.com/Entree3k/edition-manager</Support>
+  <Project>https://github.com/Entree3k/edition-manager</Project>
   <Overview>Edition Manager is a tool that automatically manages and updates movie edition information in your Plex library.</Overview>
   <Category>Tools: MediaApp:Video</Category>
   <WebUI/>
