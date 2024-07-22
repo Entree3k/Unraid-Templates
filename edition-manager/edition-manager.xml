@@ -12,7 +12,7 @@
   <Overview>Edition Manager is a tool that automatically manages and updates movie edition information in your Plex library.</Overview>
   <Category>Tools: MediaApp:Video</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/qbithelparr/qbithelparr.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/edition-manager/edition-manager.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/edition-manager/kQSCOtN6.png</Icon>
   <ExtraParams/>
   <PostArgs/>
