@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Edition-Manager</Name>
-  <Repository>your-dockerhub-username/edition-manager</Repository>
-  <Registry>https://hub.docker.com/r/your-dockerhub-username/edition-manager/</Registry>
+  <Repository>entree3000/edition-manager</Repository>
+  <Registry>https://hub.docker.com/r/entree3000/edition-manager/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
