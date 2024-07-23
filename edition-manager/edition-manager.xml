@@ -12,7 +12,7 @@
   <Overview>Edition Manager is a tool that automatically manages and updates movie edition information in your Plex library.</Overview>
   <Category>Tools: MediaApp:Video</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/edition-manager/edition-manager.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/edition-manager/kQSCOtN6.png</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -21,8 +21,14 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="AppData" Target="/app" Default="/mnt/user/appdata/edition-manager" Mode="rw" Description="Application data location" Type="Path" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/edition-manager/config" Mode="rw" Description="Configuration files location" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="Timezone (e.g., America/Los_Angeles)" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Run Mode" Target="RUN_MODE" Default="--all" Mode="" Description="Run mode (--all, --new, --reset, --backup, --restore)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/edition-manager/</Config>
+  <Config Name="Run All" Target="RUN_MODE" Default="--all" Mode="" Description="Run all operations" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Run New" Target="RUN_MODE" Default="--new" Mode="" Description="Add edition info to new movies" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Reset" Target="RUN_MODE" Default="--reset" Mode="" Description="Reset edition info for all movies" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Backup" Target="RUN_MODE" Default="--backup" Mode="" Description="Backup movie metadata" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Restore" Target="RUN_MODE" Default="--restore" Mode="" Description="Restore movie metadata from backup" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Debug" Target="DEBUG" Default="" Mode="" Description="Set to 'true' to run with Debug Logs" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Config File" Target="CONFIG_FILE" Default="" Mode="" Description="Specify a custom config file location" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Plex URL" Target="PLEX_URL" Default="" Mode="" Description="Plex server URL" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Plex Token" Target="PLEX_TOKEN" Default="" Mode="" Description="Plex server token" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
