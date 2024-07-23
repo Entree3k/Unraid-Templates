@@ -21,7 +21,7 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Config File" Target="/app/config.ini" Default="/mnt/user/appdata/edition-manager/config.ini" Mode="rw" Description="Configuration file location" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config Path" Target="/app/config" Default="/mnt/user/appdata/edition-manager/config" Mode="rw" Description="Configuration files location" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Metadata Backup Path" Target="/app/metadata_backup" Default="/mnt/user/appdata/edition-manager/metadata_backup" Mode="rw" Description="Metadata backup location" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="Timezone (e.g., America/Los_Angeles)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Run Mode" Target="RUN_MODE" Default="--all" Mode="" Description="Run mode (--all, --new, --reset, --backup, --restore)" Type="Variable" Display="always" Required="true" Mask="false"/>
