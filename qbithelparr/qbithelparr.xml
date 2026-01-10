@@ -8,7 +8,10 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/Entree3k/qbithelparr</Support>
   <Project>https://github.com/Entree3k/qbithelparr</Project>
-  <Overview>qbithelparr is a Discord bot that provides torrent status updates from qBittorrent using modern slash commands. Updated to Discord.py 2.x with comprehensive error handling.</Overview>
+  <Overview>qbithelparr bridges qBittorrent and Discord, allowing you to check torrent download status directly from your Discord server without opening the qBittorrent web interface.&#xD;&#xD;
+Using Discord's native slash commands, you can query your qBittorrent instance to see what's currently downloading, what's completed, and filter by media type (movies or TV shows). This is particularly useful for media server enthusiasts running Sonarr/Radarr automation who want quick status updates without leaving Discord.&#xD;&#xD;
+The bot connects to your qBittorrent WebUI and responds to /status commands in a designated Discord channel, displaying real-time progress, ETA, and torrent states. Messages auto-refresh and clean up after themselves to keep your channel organized.&#xD;&#xD;
+Version 2.0 brings modernized Discord.py 2.x support, proper slash commands, improved error handling, and automatic configuration file generation for easy Unraid deployment.</Overview>
   <Category>Downloaders:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/Entree3k/Unraid-Templates/main/qbithelparr/qbithelparr.xml</TemplateURL>
